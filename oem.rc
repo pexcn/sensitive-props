@@ -8,3 +8,6 @@ on property:ro.oem_unlock_supported=*
 # hide adbd is running
 on property:init.svc.adbd=*
     exec u:r:magisk:s0 root root -- ${MAGISKTMP}/resetprop -n init.svc.adbd stopped
+
+on property:init.svc.adb_root=*
+    exec u:r:magisk:s0 root root -- ${MAGISKTMP}/resetprop -n init.svc.adb_root stopped

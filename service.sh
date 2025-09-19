@@ -98,6 +98,11 @@ check_resetprop ro.force.debuggable 0
 check_resetprop ro.debuggable 0
 check_resetprop ro.adb.secure 1
 
+# BShield
+check_resetprop init.svc.adb_root stopped
+check_resetprop init.svc.adbd stopped
+check_resetprop service.adb.root 0
+
 # Native Bridge (could break some features, appdome?)
 # deleteprop ro.dalvik.vm.native.bridge
 
