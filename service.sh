@@ -73,9 +73,9 @@ for prop in ro.bootmode ro.boot.bootmode ro.boot.mode vendor.bootmode vendor.boo
 done
 
 # MIUI cross-region flash adjustments
-for prop in ro.boot.hwc ro.boot.hwcountry; do
-  maybe_resetprop "$prop" CN GLOBAL
-done
+#for prop in ro.boot.hwc ro.boot.hwcountry; do
+#  maybe_resetprop "$prop" CN GLOBAL
+#done
 
 # SafetyNet/banking app compatibility
 check_resetprop sys.oem_unlock_allowed 0
