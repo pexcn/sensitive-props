@@ -4,10 +4,6 @@ MODPATH="${0%/*}"
 MODNAME="${MODPATH##*/}"
 MAGISKTMP="$(magisk --path)" || MAGISKTMP=/sbin
 
-if [ "$(magisk -V)" -lt 26302 ] || [ "$(/data/adb/ksud -V)" -lt 10818 ]; then
-    touch "$MODPATH/disable"
-fi
-
 # Remove Play Services from Magisk DenyList when set to Enforce in normal mode
 if command -v magisk >/dev/null; then
     if magisk --denylist status; then
