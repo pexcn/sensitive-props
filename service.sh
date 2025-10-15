@@ -113,14 +113,14 @@ check_resetprop service.adb.root 0
 ### System Settings ###
 
 # Fix Restrictions on non-SDK interface and disable developer options
-for global_setting in hidden_api_policy hidden_api_policy_pre_p_apps hidden_api_policy_p_apps; do # adb_enabled development_settings_enabled tether_dun_required
-  settings delete global "$global_setting" >/dev/null 2>&1
-done
+#for global_setting in hidden_api_policy hidden_api_policy_pre_p_apps hidden_api_policy_p_apps; do # adb_enabled development_settings_enabled tether_dun_required
+#  settings delete global "$global_setting" >/dev/null 2>&1
+#done
 
 # Disable untrusted touches
-for namespace in global system secure; do
-  settings put "$namespace" "block_untrusted_touches" 0 >/dev/null 2>&1
-done
+#for namespace in global system secure; do
+#  settings put "$namespace" "block_untrusted_touches" 0 >/dev/null 2>&1
+#done
 
 ### File Permissions ###
 
