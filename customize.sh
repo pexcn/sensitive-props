@@ -1,6 +1,3 @@
-#!/bin/sh
-PATH=/data/adb/ap/bin:/data/adb/ksu/bin:/data/adb/magisk:$PATH
-
 if [ "$API" -lt 29 ]; then
   abort "! Only support Android 10+ devices"
 fi
